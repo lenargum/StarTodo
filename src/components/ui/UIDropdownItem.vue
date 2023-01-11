@@ -1,7 +1,5 @@
 <template>
-  <button
-    class="ui-dropdown-item"
-  >
+  <button class="ui-dropdown-item">
     <slot />
   </button>
 </template>

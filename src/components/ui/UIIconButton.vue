@@ -1,7 +1,5 @@
 <template>
-  <button
-    class="ui-icon-button"
-  >
+  <button class="ui-icon-button">
     <slot />
   </button>
 </template>
