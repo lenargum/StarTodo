@@ -1,4 +1,5 @@
 import {defineStore, acceptHMRUpdate} from 'pinia'
+import initTasks from '../assets/initTasks'
 
 const LS_KEY = 'starTodo'
 
@@ -16,7 +17,8 @@ export const useTasksStore = defineStore({
             if (save) {
                 this.tasks = save
             } else {
-                this.tasks = []
+                this.tasks = [...initTasks]
+                this.saveTasks()
             }
         },
         

@@ -50,14 +50,10 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/css/transitions.scss";
 
-.tasks {
-  position: relative;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+header {
+  @media (min-width: 1000px) {
+    margin: 75px 0 25px;
+  }
 }
 
 .add-button {
@@ -74,14 +70,30 @@ export default {
   padding: 12px;
 
   background: #F9EA85;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   border: none;
 
   cursor: pointer;
 
+  transition: box-shadow 0.1s ease-in-out;
+
   &:hover {
-    box-shadow: 0 4px 14px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
   }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.tasks {
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 </style>
